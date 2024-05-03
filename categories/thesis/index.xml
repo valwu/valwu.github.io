@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Thesis - Category - KnowledgeSqueezer</title>
+    <link>https://valwu.gitee.io/categories/thesis/</link>
+    <description>Thesis - Category | KnowledgeSqueezer</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 12 Feb 2014 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://valwu.gitee.io/categories/thesis/" rel="self" type="application/rss+xml" /><item>
+  <title>基于用户物品成对分块的协同过滤算法</title>
+  <link>https://valwu.gitee.io/monograph/master/master/</link>
+  <pubDate>Wed, 12 Feb 2014 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/monograph/master/master/</guid>
+  <description><![CDATA[本文是作者的硕士学位论文，自觉是一个值得一读的作品。
+pdf文件]]></description>
+</item>
+</channel>
+</rss>

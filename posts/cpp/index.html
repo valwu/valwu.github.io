@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>c&#43;&#43;编程精要 - KnowledgeSqueezer</title><meta name="author" content="">
+<meta name="author-link" content="">
+<meta name="description" content="本文对 c&#43;&#43; 的编程知识做了一个精要的讲解，希望读读者有益。
+本文的目录如下：
+c&#43;&#43;传统知识 c&#43;&#43;小型知识点 常见疑难问题 OOP进阶 头文件与namespace c&#43;&#43;文件与字符串操作 标准API 标准库详解 c&#43;&#43;内存管理 内存管理入门 STL内存管理 返回值的内存管理 引用与指针 现代内存与指针管理技术 std::move与右值引用 new /delete 运算符 malloc类函数行为研究 c&#43;&#43;内存管理之性能优化 c&#43;&#43;新特征 c&#43;&#43;新特性 {}-Initialization Using的用法 range-based for loop c&#43;&#43;指令编程 宏编程，泛型编程与元编程 C/C&#43;&#43;宏编程 C/C&#43;&#43;泛型编程 可变参数与可变参数模板Variadic template C&#43;&#43;元编程 第三方c&#43;&#43;库 多线程与多核编程 C&#43;&#43;多线程并发基础入门教程 硬件与并发 多线程与OOP 定时器线程 线程的资源管理 多线程的内存模型 c&#43;&#43;的锁 高性能多线程 OpenMP C/C&#43;&#43; 多线程编程/ 绑定CPU 编译优化与体系结构 基本概览 cache友好编程 内核与网络 c&#43;&#43;致命错误 c&#43;&#43; debug工具 c&#43;&#43;性能优化概述 pdf文件" /><meta itemprop="name" content="c&#43;&#43;编程精要">
+<meta itemprop="description" content="本文对 c&#43;&#43; 的编程知识做了一个精要的讲解，希望读读者有益。
+本文的目录如下：
+c&#43;&#43;传统知识 c&#43;&#43;小型知识点 常见疑难问题 OOP进阶 头文件与namespace c&#43;&#43;文件与字符串操作 标准API 标准库详解 c&#43;&#43;内存管理 内存管理入门 STL内存管理 返回值的内存管理 引用与指针 现代内存与指针管理技术 std::move与右值引用 new /delete 运算符 malloc类函数行为研究 c&#43;&#43;内存管理之性能优化 c&#43;&#43;新特征 c&#43;&#43;新特性 {}-Initialization Using的用法 range-based for loop c&#43;&#43;指令编程 宏编程，泛型编程与元编程 C/C&#43;&#43;宏编程 C/C&#43;&#43;泛型编程 可变参数与可变参数模板Variadic template C&#43;&#43;元编程 第三方c&#43;&#43;库 多线程与多核编程 C&#43;&#43;多线程并发基础入门教程 硬件与并发 多线程与OOP 定时器线程 线程的资源管理 多线程的内存模型 c&#43;&#43;的锁 高性能多线程 OpenMP C/C&#43;&#43; 多线程编程/ 绑定CPU 编译优化与体系结构 基本概览 cache友好编程 内核与网络 c&#43;&#43;致命错误 c&#43;&#43; debug工具 c&#43;&#43;性能优化概述 pdf文件"><meta itemprop="datePublished" content="2023-07-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-07-15T00:00:00+00:00" />
+<meta itemprop="wordCount" content="61">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="c&#43;&#43;编程精要" />
+<meta property="og:description" content="本文对 c&#43;&#43; 的编程知识做了一个精要的讲解，希望读读者有益。
+本文的目录如下：
+c&#43;&#43;传统知识 c&#43;&#43;小型知识点 常见疑难问题 OOP进阶 头文件与namespace c&#43;&#43;文件与字符串操作 标准API 标准库详解 c&#43;&#43;内存管理 内存管理入门 STL内存管理 返回值的内存管理 引用与指针 现代内存与指针管理技术 std::move与右值引用 new /delete 运算符 malloc类函数行为研究 c&#43;&#43;内存管理之性能优化 c&#43;&#43;新特征 c&#43;&#43;新特性 {}-Initialization Using的用法 range-based for loop c&#43;&#43;指令编程 宏编程，泛型编程与元编程 C/C&#43;&#43;宏编程 C/C&#43;&#43;泛型编程 可变参数与可变参数模板Variadic template C&#43;&#43;元编程 第三方c&#43;&#43;库 多线程与多核编程 C&#43;&#43;多线程并发基础入门教程 硬件与并发 多线程与OOP 定时器线程 线程的资源管理 多线程的内存模型 c&#43;&#43;的锁 高性能多线程 OpenMP C/C&#43;&#43; 多线程编程/ 绑定CPU 编译优化与体系结构 基本概览 cache友好编程 内核与网络 c&#43;&#43;致命错误 c&#43;&#43; debug工具 c&#43;&#43;性能优化概述 pdf文件" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://valwu.gitee.io/posts/cpp/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-07-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="c&#43;&#43;编程精要"/>
+<meta name="twitter:description" content="本文对 c&#43;&#43; 的编程知识做了一个精要的讲解，希望读读者有益。
+本文的目录如下：
+c&#43;&#43;传统知识 c&#43;&#43;小型知识点 常见疑难问题 OOP进阶 头文件与namespace c&#43;&#43;文件与字符串操作 标准API 标准库详解 c&#43;&#43;内存管理 内存管理入门 STL内存管理 返回值的内存管理 引用与指针 现代内存与指针管理技术 std::move与右值引用 new /delete 运算符 malloc类函数行为研究 c&#43;&#43;内存管理之性能优化 c&#43;&#43;新特征 c&#43;&#43;新特性 {}-Initialization Using的用法 range-based for loop c&#43;&#43;指令编程 宏编程，泛型编程与元编程 C/C&#43;&#43;宏编程 C/C&#43;&#43;泛型编程 可变参数与可变参数模板Variadic template C&#43;&#43;元编程 第三方c&#43;&#43;库 多线程与多核编程 C&#43;&#43;多线程并发基础入门教程 硬件与并发 多线程与OOP 定时器线程 线程的资源管理 多线程的内存模型 c&#43;&#43;的锁 高性能多线程 OpenMP C/C&#43;&#43; 多线程编程/ 绑定CPU 编译优化与体系结构 基本概览 cache友好编程 内核与网络 c&#43;&#43;致命错误 c&#43;&#43; debug工具 c&#43;&#43;性能优化概述 pdf文件"/>
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://valwu.gitee.io/posts/cpp/" /><link rel="prev" href="https://valwu.gitee.io/posts/or/" /><link rel="next" href="https://valwu.gitee.io/posts/longchain/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "c++编程精要",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/valwu.gitee.io\/posts\/cpp\/"
+    },"genre": "posts","wordcount":  61 ,
+    "url": "https:\/\/valwu.gitee.io\/posts\/cpp\/","datePublished": "2023-07-15T00:00:00+00:00","dateModified": "2023-07-15T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "jianjun wu"
+      },"description": ""
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="KnowledgeSqueezer"><span class="header-title-text">KnowledgeSqueezer</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="KnowledgeSqueezer"><span class="header-title-text">KnowledgeSqueezer</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>c&#43;&#43;编程精要</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      jianjun wu</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/high-performance-computing/" class="post-category" title="Category - High Performance Computing"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> High Performance Computing</a></span></div><div class="post-meta-line"><span title="published on 2023-07-15 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2023-07-15">2023-07-15</time></span>&nbsp;<span title="61 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 100 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>One minute</span>&nbsp;</div>
+    </div><div class="content" id="content"><p>本文对 c++ 的编程知识做了一个精要的讲解，希望读读者有益。</p>
+<p>本文的目录如下：</p>
+<ul>
+<li>c++传统知识
+<ul>
+<li>c++小型知识点</li>
+<li>常见疑难问题</li>
+<li>OOP进阶</li>
+<li>头文件与namespace</li>
+<li>c++文件与字符串操作</li>
+<li>标准API</li>
+<li>标准库详解</li>
+</ul>
+</li>
+<li>c++内存管理
+<ul>
+<li>内存管理入门</li>
+<li>STL内存管理</li>
+<li>返回值的内存管理</li>
+<li>引用与指针</li>
+<li>现代内存与指针管理技术</li>
+<li>std::move与右值引用</li>
+<li>new /delete 运算符</li>
+<li>malloc类函数行为研究</li>
+<li>c++内存管理之性能优化</li>
+</ul>
+</li>
+<li>c++新特征
+<ul>
+<li>c++新特性</li>
+<li>{}-Initialization</li>
+<li>Using的用法</li>
+<li>range-based for loop</li>
+</ul>
+</li>
+<li>c++指令编程</li>
+<li>宏编程，泛型编程与元编程
+<ul>
+<li>C/C++宏编程</li>
+<li>C/C++泛型编程</li>
+<li>可变参数与可变参数模板Variadic template</li>
+<li>C++元编程</li>
+</ul>
+</li>
+<li>第三方c++库</li>
+<li>多线程与多核编程
+<ul>
+<li>C++多线程并发基础入门教程</li>
+<li>硬件与并发</li>
+<li>多线程与OOP</li>
+<li>定时器线程</li>
+<li>线程的资源管理</li>
+<li>多线程的内存模型</li>
+<li>c++的锁</li>
+<li>高性能多线程</li>
+<li>OpenMP</li>
+<li>C/C++ 多线程编程/ 绑定CPU</li>
+</ul>
+</li>
+<li>编译优化与体系结构
+<ul>
+<li>基本概览</li>
+<li>cache友好编程</li>
+</ul>
+</li>
+<li>内核与网络
+<ul>
+<li>c++致命错误</li>
+</ul>
+</li>
+<li>c++ debug工具</li>
+<li>c++性能优化概述</li>
+</ul>
+<p><a href="/posts/hpc/cpp/cpp.pdf">pdf文件</a></p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Updated on 2023-07-15 00:00:00">Updated on 2023-07-15&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/cpp/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://valwu.gitee.io/posts/cpp/" data-title="c&#43;&#43;编程精要"><i class="fa-brands fa-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://valwu.gitee.io/posts/cpp/"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://valwu.gitee.io/posts/cpp/" data-title="c&#43;&#43;编程精要"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/or/" class="post-nav-item" rel="prev" title="运筹学入门之单纯形法推导"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>运筹学入门之单纯形法推导</a>
+      <a href="/posts/longchain/" class="post-nav-item" rel="next" title="LangChain应用与源码探究">LangChain应用与源码探究<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.124.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.2"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">Theme FixIt works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

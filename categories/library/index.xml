@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Library - Category - KnowledgeSqueezer</title>
+    <link>https://valwu.gitee.io/categories/library/</link>
+    <description>Library - Category | KnowledgeSqueezer</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 10 Oct 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://valwu.gitee.io/categories/library/" rel="self" type="application/rss+xml" /><item>
+  <title>LangChain应用与源码探究</title>
+  <link>https://valwu.gitee.io/posts/longchain/</link>
+  <pubDate>Tue, 10 Oct 2023 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/longchain/</guid>
+  <description><![CDATA[LangChain 作为2023年热门的LLM应用技术，本文对其做一个较为深入的探究，希望对读者有益。
+本文目录如下：
+LLM与LangChain概述 LangChain概览 hello world langchain例子 LangChain 中文入门教程 LangChain与开源大模型的融合 embedding与向量数据库 Langchain中使用Qdrant qdrant开发手册 Embedding in OpenAI API Qdrant与Embedding协同的使用 提示工程Prompt LLM Prompt概述 LangChain中的Prompt Agents与复杂任务 Agents概述 LangChain的Agents LangChain开发手册与源码解读 预处理与知识库源码 prompt源码 LanguageModel源码 Chain源码 Agent源码 pdf文件]]></description>
+</item>
+</channel>
+</rss>

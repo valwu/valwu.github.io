@@ -1,0 +1,96 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>KnowledgeSqueezer</title>
+    <link>https://valwu.gitee.io/</link>
+    <description>KnowledgeSqueezer</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 02 Mar 2024 00:00:00 &#43;0000</lastBuildDate>
+      <atom:link href="https://valwu.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+  <title>LLM前的NLP基础</title>
+  <link>https://valwu.gitee.io/posts/nlp/</link>
+  <pubDate>Fri, 15 Dec 2023 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/nlp/</guid>
+  <description><![CDATA[本文对LLM前的基于DL的NLP算法做了一个回顾，对transformer和attention等知识做了一个较为nice介绍，希望对读者有益。
+本文的目录如下：
+NLP 概述 传统算法 基于 DL 的 NLP pdf文件]]></description>
+</item>
+<item>
+  <title>LangChain应用与源码探究</title>
+  <link>https://valwu.gitee.io/posts/longchain/</link>
+  <pubDate>Tue, 10 Oct 2023 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/longchain/</guid>
+  <description><![CDATA[LangChain 作为2023年热门的LLM应用技术，本文对其做一个较为深入的探究，希望对读者有益。
+本文目录如下：
+LLM与LangChain概述 LangChain概览 hello world langchain例子 LangChain 中文入门教程 LangChain与开源大模型的融合 embedding与向量数据库 Langchain中使用Qdrant qdrant开发手册 Embedding in OpenAI API Qdrant与Embedding协同的使用 提示工程Prompt LLM Prompt概述 LangChain中的Prompt Agents与复杂任务 Agents概述 LangChain的Agents LangChain开发手册与源码解读 预处理与知识库源码 prompt源码 LanguageModel源码 Chain源码 Agent源码 pdf文件]]></description>
+</item>
+<item>
+  <title>c&#43;&#43;编程精要</title>
+  <link>https://valwu.gitee.io/posts/cpp/</link>
+  <pubDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/cpp/</guid>
+  <description><![CDATA[本文对 c++ 的编程知识做了一个精要的讲解，希望读读者有益。
+本文的目录如下：
+c++传统知识 c++小型知识点 常见疑难问题 OOP进阶 头文件与namespace c++文件与字符串操作 标准API 标准库详解 c++内存管理 内存管理入门 STL内存管理 返回值的内存管理 引用与指针 现代内存与指针管理技术 std::move与右值引用 new /delete 运算符 malloc类函数行为研究 c++内存管理之性能优化 c++新特征 c++新特性 {}-Initialization Using的用法 range-based for loop c++指令编程 宏编程，泛型编程与元编程 C/C++宏编程 C/C++泛型编程 可变参数与可变参数模板Variadic template C++元编程 第三方c++库 多线程与多核编程 C++多线程并发基础入门教程 硬件与并发 多线程与OOP 定时器线程 线程的资源管理 多线程的内存模型 c++的锁 高性能多线程 OpenMP C/C++ 多线程编程/ 绑定CPU 编译优化与体系结构 基本概览 cache友好编程 内核与网络 c++致命错误 c++ debug工具 c++性能优化概述 pdf文件]]></description>
+</item>
+<item>
+  <title>运筹学入门之单纯形法推导</title>
+  <link>https://valwu.gitee.io/posts/or/</link>
+  <pubDate>Fri, 15 Oct 2021 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/or/</guid>
+  <description><![CDATA[本文对运筹学中的单纯性法进行了推导，以便适合代码实现。
+本文的目录如下：
+Elementary Mathematic Analytics 矩阵代数基础知识 线性规划基础知识 Simplex Method Revised Simplex Method pdf文件]]></description>
+</item>
+<item>
+  <title>Graph Learning与GCN的理论溯源</title>
+  <link>https://valwu.gitee.io/posts/gnn/</link>
+  <pubDate>Tue, 18 May 2021 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/gnn/</guid>
+  <description><![CDATA[GCN作为风靡一时的算法，其理论源远流长，本文对此做一个基本介绍，希望对读者有益。
+本文的目录如下：
+Spectral Graph Theory基础 信号处理初步 Graph Signal Transformation Graph Convolutional Networks pdf文件]]></description>
+</item>
+<item>
+  <title>流形学习初步</title>
+  <link>https://valwu.gitee.io/posts/mainfold/</link>
+  <pubDate>Thu, 15 Apr 2021 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/mainfold/</guid>
+  <description><![CDATA[本文对流形学习做了一个快速入门。目录如下：
+isomap与LLE SNE与t-SNE t-SNE加速技术 UMAP pdf文件]]></description>
+</item>
+<item>
+  <title>社团挖掘算法审视</title>
+  <link>https://valwu.gitee.io/posts/community/</link>
+  <pubDate>Thu, 15 Apr 2021 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/community/</guid>
+  <description><![CDATA[社团挖掘作为流行至今的研究领域，其诞生了诸多极具影响力的算法，本文对此做一个以点提面的介绍
+本文的目录如下：
+概述 Louvain算法与Leiden算法 迭代优化下的社团挖掘 pdf文件]]></description>
+</item>
+<item>
+  <title>应用机器学习入门</title>
+  <link>https://valwu.gitee.io/posts/aml/</link>
+  <pubDate>Wed, 15 Apr 2020 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/aml/</guid>
+  <description><![CDATA[机器学习在工业界已经被大量使用，本教程面向初学者对工作中常用的机器学习基本知识做一个概览。目录如下：
+总体概述 理论基础 常用算法 平台工具 一个例子 pdf文件]]></description>
+</item>
+<item>
+  <title>强化学习精简教程：从MDP到CFR</title>
+  <link>https://valwu.gitee.io/posts/rl/</link>
+  <pubDate>Sun, 22 Dec 2019 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/rl/</guid>
+  <description><![CDATA[强化学习作为人工智能中一个经典的研究领域，与深度学习爱结合后涌现出诸多震撼性效果，更是被很多人认为可能是通用人工智能的终极方案。
+basic concepts value lookup algorithms value approximation algorithms policy gradient algorithms Monte Carlo Tree Search imperfect information game adversarial machine learning security Games team-maxmin equilibria pdf文件]]></description>
+</item>
+</channel>
+</rss>

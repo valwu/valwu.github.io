@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>LangChain应用与源码探究 - KnowledgeSqueezer</title><meta name="author" content="">
+<meta name="author-link" content="">
+<meta name="description" content="LangChain 作为2023年热门的LLM应用技术，本文对其做一个较为深入的探究，希望对读者有益。
+本文目录如下：
+LLM与LangChain概述 LangChain概览 hello world langchain例子 LangChain 中文入门教程 LangChain与开源大模型的融合 embedding与向量数据库 Langchain中使用Qdrant qdrant开发手册 Embedding in OpenAI API Qdrant与Embedding协同的使用 提示工程Prompt LLM Prompt概述 LangChain中的Prompt Agents与复杂任务 Agents概述 LangChain的Agents LangChain开发手册与源码解读 预处理与知识库源码 prompt源码 LanguageModel源码 Chain源码 Agent源码 pdf文件" /><meta itemprop="name" content="LangChain应用与源码探究">
+<meta itemprop="description" content="LangChain 作为2023年热门的LLM应用技术，本文对其做一个较为深入的探究，希望对读者有益。
+本文目录如下：
+LLM与LangChain概述 LangChain概览 hello world langchain例子 LangChain 中文入门教程 LangChain与开源大模型的融合 embedding与向量数据库 Langchain中使用Qdrant qdrant开发手册 Embedding in OpenAI API Qdrant与Embedding协同的使用 提示工程Prompt LLM Prompt概述 LangChain中的Prompt Agents与复杂任务 Agents概述 LangChain的Agents LangChain开发手册与源码解读 预处理与知识库源码 prompt源码 LanguageModel源码 Chain源码 Agent源码 pdf文件"><meta itemprop="datePublished" content="2023-10-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-10-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="33">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="LangChain应用与源码探究" />
+<meta property="og:description" content="LangChain 作为2023年热门的LLM应用技术，本文对其做一个较为深入的探究，希望对读者有益。
+本文目录如下：
+LLM与LangChain概述 LangChain概览 hello world langchain例子 LangChain 中文入门教程 LangChain与开源大模型的融合 embedding与向量数据库 Langchain中使用Qdrant qdrant开发手册 Embedding in OpenAI API Qdrant与Embedding协同的使用 提示工程Prompt LLM Prompt概述 LangChain中的Prompt Agents与复杂任务 Agents概述 LangChain的Agents LangChain开发手册与源码解读 预处理与知识库源码 prompt源码 LanguageModel源码 Chain源码 Agent源码 pdf文件" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://valwu.gitee.io/posts/longchain/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-10-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="LangChain应用与源码探究"/>
+<meta name="twitter:description" content="LangChain 作为2023年热门的LLM应用技术，本文对其做一个较为深入的探究，希望对读者有益。
+本文目录如下：
+LLM与LangChain概述 LangChain概览 hello world langchain例子 LangChain 中文入门教程 LangChain与开源大模型的融合 embedding与向量数据库 Langchain中使用Qdrant qdrant开发手册 Embedding in OpenAI API Qdrant与Embedding协同的使用 提示工程Prompt LLM Prompt概述 LangChain中的Prompt Agents与复杂任务 Agents概述 LangChain的Agents LangChain开发手册与源码解读 预处理与知识库源码 prompt源码 LanguageModel源码 Chain源码 Agent源码 pdf文件"/>
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://valwu.gitee.io/posts/longchain/" /><link rel="prev" href="https://valwu.gitee.io/posts/cpp/" /><link rel="next" href="https://valwu.gitee.io/posts/nlp/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "LangChain应用与源码探究",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/valwu.gitee.io\/posts\/longchain\/"
+    },"genre": "posts","wordcount":  33 ,
+    "url": "https:\/\/valwu.gitee.io\/posts\/longchain\/","datePublished": "2023-10-10T00:00:00+00:00","dateModified": "2023-10-10T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "jianjun wu"
+      },"description": ""
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="KnowledgeSqueezer"><span class="header-title-text">KnowledgeSqueezer</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="KnowledgeSqueezer"><span class="header-title-text">KnowledgeSqueezer</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>LangChain应用与源码探究</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      jianjun wu</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/library/" class="post-category" title="Category - Library"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Library</a></span></div><div class="post-meta-line"><span title="published on 2023-10-10 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2023-10-10">2023-10-10</time></span>&nbsp;<span title="33 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 100 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>One minute</span>&nbsp;</div>
+    </div><div class="content" id="content"><p>LangChain 作为2023年热门的LLM应用技术，本文对其做一个较为深入的探究，希望对读者有益。</p>
+<p>本文目录如下：</p>
+<ul>
+<li>LLM与LangChain概述
+<ul>
+<li>LangChain概览</li>
+<li>hello world</li>
+<li>langchain例子</li>
+<li>LangChain 中文入门教程</li>
+<li>LangChain与开源大模型的融合</li>
+</ul>
+</li>
+<li>embedding与向量数据库
+<ul>
+<li>Langchain中使用Qdrant</li>
+<li>qdrant开发手册</li>
+<li>Embedding in OpenAI API</li>
+<li>Qdrant与Embedding协同的使用</li>
+</ul>
+</li>
+<li>提示工程Prompt
+<ul>
+<li>LLM Prompt概述</li>
+<li>LangChain中的Prompt</li>
+</ul>
+</li>
+<li>Agents与复杂任务
+<ul>
+<li>Agents概述</li>
+<li>LangChain的Agents</li>
+</ul>
+</li>
+<li>LangChain开发手册与源码解读
+<ul>
+<li>预处理与知识库源码</li>
+<li>prompt源码</li>
+<li>LanguageModel源码</li>
+<li>Chain源码</li>
+<li>Agent源码</li>
+</ul>
+</li>
+</ul>
+<p><a href="/posts/library/langchain/longchain.pdf">pdf文件</a></p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Updated on 2023-10-10 00:00:00">Updated on 2023-10-10&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/longchain/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://valwu.gitee.io/posts/longchain/" data-title="LangChain应用与源码探究"><i class="fa-brands fa-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://valwu.gitee.io/posts/longchain/"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://valwu.gitee.io/posts/longchain/" data-title="LangChain应用与源码探究"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/cpp/" class="post-nav-item" rel="prev" title="c&#43;&#43;编程精要"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>c&#43;&#43;编程精要</a>
+      <a href="/posts/nlp/" class="post-nav-item" rel="next" title="LLM前的NLP基础">LLM前的NLP基础<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.124.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.2"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">Theme FixIt works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

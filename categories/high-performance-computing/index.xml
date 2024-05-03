@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>High Performance Computing - Category - KnowledgeSqueezer</title>
+    <link>https://valwu.gitee.io/categories/high-performance-computing/</link>
+    <description>High Performance Computing - Category | KnowledgeSqueezer</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://valwu.gitee.io/categories/high-performance-computing/" rel="self" type="application/rss+xml" /><item>
+  <title>c&#43;&#43;编程精要</title>
+  <link>https://valwu.gitee.io/posts/cpp/</link>
+  <pubDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/cpp/</guid>
+  <description><![CDATA[本文对 c++ 的编程知识做了一个精要的讲解，希望读读者有益。
+本文的目录如下：
+c++传统知识 c++小型知识点 常见疑难问题 OOP进阶 头文件与namespace c++文件与字符串操作 标准API 标准库详解 c++内存管理 内存管理入门 STL内存管理 返回值的内存管理 引用与指针 现代内存与指针管理技术 std::move与右值引用 new /delete 运算符 malloc类函数行为研究 c++内存管理之性能优化 c++新特征 c++新特性 {}-Initialization Using的用法 range-based for loop c++指令编程 宏编程，泛型编程与元编程 C/C++宏编程 C/C++泛型编程 可变参数与可变参数模板Variadic template C++元编程 第三方c++库 多线程与多核编程 C++多线程并发基础入门教程 硬件与并发 多线程与OOP 定时器线程 线程的资源管理 多线程的内存模型 c++的锁 高性能多线程 OpenMP C/C++ 多线程编程/ 绑定CPU 编译优化与体系结构 基本概览 cache友好编程 内核与网络 c++致命错误 c++ debug工具 c++性能优化概述 pdf文件]]></description>
+</item>
+</channel>
+</rss>

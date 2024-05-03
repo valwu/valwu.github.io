@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Mathematics - Category - KnowledgeSqueezer</title>
+    <link>https://valwu.gitee.io/categories/mathematics/</link>
+    <description>Mathematics - Category | KnowledgeSqueezer</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 15 Oct 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://valwu.gitee.io/categories/mathematics/" rel="self" type="application/rss+xml" /><item>
+  <title>运筹学入门之单纯形法推导</title>
+  <link>https://valwu.gitee.io/posts/or/</link>
+  <pubDate>Fri, 15 Oct 2021 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/or/</guid>
+  <description><![CDATA[本文对运筹学中的单纯性法进行了推导，以便适合代码实现。
+本文的目录如下：
+Elementary Mathematic Analytics 矩阵代数基础知识 线性规划基础知识 Simplex Method Revised Simplex Method pdf文件]]></description>
+</item>
+</channel>
+</rss>
