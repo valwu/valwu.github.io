@@ -92,5 +92,15 @@ isomap与LLE SNE与t-SNE t-SNE加速技术 UMAP pdf文件]]></description>
   <description><![CDATA[强化学习作为人工智能中一个经典的研究领域，与深度学习爱结合后涌现出诸多震撼性效果，更是被很多人认为可能是通用人工智能的终极方案。
 basic concepts value lookup algorithms value approximation algorithms policy gradient algorithms Monte Carlo Tree Search imperfect information game adversarial machine learning security Games team-maxmin equilibria pdf文件]]></description>
 </item>
+<item>
+  <title>SQL计算引擎介绍</title>
+  <link>https://valwu.gitee.io/posts/sqlengines/</link>
+  <pubDate>Sat, 12 Jan 2019 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/sqlengines/</guid>
+  <description><![CDATA[SQL作为数据计算中最广为使用的语言，具有持久强大的生命力，如今绝大多数大数据组件都提供SQL接口，本文对这些组件做一个综述，希望对读者有益。
+本文的目录如下：
+summary of database technologies. relational database and its extensions. SQL-On-Hadoop NoSQL and NewSQL others database. pdf文件]]></description>
+</item>
 </channel>
 </rss>
