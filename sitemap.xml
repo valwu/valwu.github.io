@@ -2,11 +2,11 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   ><url>
-      <loc>https://valwu.gitee.io/</loc><lastmod>2024-03-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-      <loc>https://valwu.gitee.io/posts/</loc><lastmod>2024-03-02T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
       <loc>https://valwu.gitee.io/categories/</loc><lastmod>2023-12-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+      <loc>https://valwu.gitee.io/</loc><lastmod>2023-12-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
       <loc>https://valwu.gitee.io/posts/nlp/</loc><lastmod>2023-12-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
       <loc>https://valwu.gitee.io/categories/machine-learning/</loc><lastmod>2023-12-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+      <loc>https://valwu.gitee.io/posts/</loc><lastmod>2023-12-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
       <loc>https://valwu.gitee.io/posts/longchain/</loc><lastmod>2023-10-10T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
       <loc>https://valwu.gitee.io/categories/library/</loc><lastmod>2023-10-10T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
       <loc>https://valwu.gitee.io/posts/cpp/</loc><lastmod>2023-07-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
