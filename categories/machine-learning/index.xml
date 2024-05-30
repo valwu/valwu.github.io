@@ -3,15 +3,53 @@
     <title>Machine Learning - Category - KnowledgeSqueezer</title>
     <link>https://valwu.gitee.io/categories/machine-learning/</link>
     <description>Machine Learning - Category | KnowledgeSqueezer</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 15 Dec 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://valwu.gitee.io/categories/machine-learning/" rel="self" type="application/rss+xml" /><item>
-  <title>LLM前的NLP基础</title>
-  <link>https://valwu.gitee.io/posts/nlp/</link>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 17 May 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://valwu.gitee.io/categories/machine-learning/" rel="self" type="application/rss+xml" /><item>
+  <title>LLM系列4：位置编码与外推技术</title>
+  <link>https://valwu.gitee.io/posts/llm5/</link>
+  <pubDate>Fri, 17 May 2024 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/llm5/</guid>
+  <description><![CDATA[本文对目前的位置编码和外推技术，如四种相位位置编码算法，RoPE，ALiBi，Position Interpolation等做了介绍，希望对读者有益。
+pdf文件]]></description>
+</item>
+<item>
+  <title>LLM系列4：推理加速技术</title>
+  <link>https://valwu.gitee.io/posts/llm4/</link>
+  <pubDate>Tue, 30 Apr 2024 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/llm4/</guid>
+  <description><![CDATA[本文对目前热门的加速技术做了介绍，如FlashAttention，KV Cache和GQA等，希望对读者有益。
+pdf文件]]></description>
+</item>
+<item>
+  <title>LLM系列3：微调算法原理</title>
+  <link>https://valwu.gitee.io/posts/llm3/</link>
+  <pubDate>Thu, 25 Apr 2024 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/llm3/</guid>
+  <description><![CDATA[本文对目前被广泛使用的微调算法，诸如P-Tuning，LoRA和IA3进行了介绍，希望对读者有益。
+本文的目录如下：
+提示学习与语境学习 参数高效微调 pdf文件]]></description>
+</item>
+<item>
+  <title>LLM系列2：几个大模型系列的工作</title>
+  <link>https://valwu.gitee.io/posts/llm2/</link>
+  <pubDate>Mon, 15 Apr 2024 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/llm2/</guid>
+  <description><![CDATA[本文对目前流行的三个系列的大模型进行介绍，希望对读者有益。
+本文的目录如下：
+GPT系列 LLaMA系列 GLM系列 pdf文件]]></description>
+</item>
+<item>
+  <title>LLM系列1：LLM前的NLP基础</title>
+  <link>https://valwu.gitee.io/posts/llm1/</link>
   <pubDate>Fri, 15 Dec 2023 00:00:00 &#43;0000</pubDate>
   <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/nlp/</guid>
-  <description><![CDATA[本文对LLM前的基于DL的NLP算法做了一个回顾，对transformer和attention等知识做了一个较为nice介绍，希望对读者有益。
+  <guid>https://valwu.gitee.io/posts/llm1/</guid>
+  <description><![CDATA[本文对LLM前的基于DL的NLP算法做了一个回顾。对word2vec和seq2seq， 并对attention、Transformer和BERT等知识做了一个较为深入浅出的介绍，希望对读者有益。
 本文的目录如下：
-NLP 概述 传统算法 基于 DL 的 NLP pdf文件]]></description>
+概述 word2vec seq2seq Attention 与 Transformer BERT系列 pdf文件]]></description>
 </item>
 <item>
   <title>Graph Learning与GCN的理论溯源</title>
@@ -59,44 +97,6 @@ isomap与LLE SNE与t-SNE t-SNE加速技术 UMAP pdf文件]]></description>
   <guid>https://valwu.gitee.io/posts/rl/</guid>
   <description><![CDATA[强化学习作为人工智能中一个经典的研究领域，与深度学习爱结合后涌现出诸多震撼性效果，更是被很多人认为可能是通用人工智能的终极方案。
 basic concepts value lookup algorithms value approximation algorithms policy gradient algorithms Monte Carlo Tree Search imperfect information game adversarial machine learning security Games team-maxmin equilibria pdf文件]]></description>
-</item>
-<item>
-  <title>tensorflow 1.x 计算图入门介绍</title>
-  <link>https://valwu.gitee.io/posts/tensorflow/</link>
-  <pubDate>Fri, 02 Nov 2018 00:00:00 &#43;0000</pubDate>
-  <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/tensorflow/</guid>
-  <description><![CDATA[tensorflow 作为 deep learnig framwork的里程碑，被工业界广泛使用，本文对其计算图部分做一个基本的介绍，希望对读者有益。
-本文的目录如下：
-summary of TensorFlow Hello World basic data types and structures Tensor Board Access of calculation graph pdf文件]]></description>
-</item>
-<item>
-  <title>XGBoost的源起与原理</title>
-  <link>https://valwu.gitee.io/posts/boost/</link>
-  <pubDate>Sun, 15 Jul 2018 00:00:00 &#43;0000</pubDate>
-  <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/boost/</guid>
-  <description><![CDATA[XGBoost在广泛使用中被证明是极其有效且高效的算法，本文对其理论源起和关键原理做一个探究，希望对读者有益。
-本文的目录如下：
-回顾 Boost技术 XGBoost原理 树节点分裂算法 pdf文件]]></description>
-</item>
-<item>
-  <title>LDA话题模型介绍及其求解算法的推导</title>
-  <link>https://valwu.gitee.io/posts/lda/</link>
-  <pubDate>Sat, 10 May 2014 00:00:00 &#43;0000</pubDate>
-  <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/lda/</guid>
-  <description><![CDATA[Latent Dirichlet Allocation (LDA) 是一个经典的 topic model, 它具有非常优美的数学形式，本文详细阐述了其原理以及求解算法，希望对读者有益。
-pdf文件]]></description>
-</item>
-<item>
-  <title>受限Boltzmann机(RBM) 介绍</title>
-  <link>https://valwu.gitee.io/posts/bolz/</link>
-  <pubDate>Fri, 12 Jul 2013 00:00:00 &#43;0000</pubDate>
-  <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/bolz/</guid>
-  <description><![CDATA[在如今，deep learning 已经妇孺皆知，作为曾经的deep learning 开山工作，RBM已经罕为人知，本文对 RBM做一个介绍，也同时对曾经的工作致敬。
-pdf文件]]></description>
 </item>
 </channel>
 </rss>

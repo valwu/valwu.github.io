@@ -3,15 +3,53 @@
     <title>All Posts - KnowledgeSqueezer</title>
     <link>https://valwu.gitee.io/posts/</link>
     <description>All Posts | KnowledgeSqueezer</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 15 Dec 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://valwu.gitee.io/posts/" rel="self" type="application/rss+xml" /><item>
-  <title>LLM前的NLP基础</title>
-  <link>https://valwu.gitee.io/posts/nlp/</link>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 17 May 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://valwu.gitee.io/posts/" rel="self" type="application/rss+xml" /><item>
+  <title>LLM系列4：位置编码与外推技术</title>
+  <link>https://valwu.gitee.io/posts/llm5/</link>
+  <pubDate>Fri, 17 May 2024 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/llm5/</guid>
+  <description><![CDATA[本文对目前的位置编码和外推技术，如四种相位位置编码算法，RoPE，ALiBi，Position Interpolation等做了介绍，希望对读者有益。
+pdf文件]]></description>
+</item>
+<item>
+  <title>LLM系列4：推理加速技术</title>
+  <link>https://valwu.gitee.io/posts/llm4/</link>
+  <pubDate>Tue, 30 Apr 2024 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/llm4/</guid>
+  <description><![CDATA[本文对目前热门的加速技术做了介绍，如FlashAttention，KV Cache和GQA等，希望对读者有益。
+pdf文件]]></description>
+</item>
+<item>
+  <title>LLM系列3：微调算法原理</title>
+  <link>https://valwu.gitee.io/posts/llm3/</link>
+  <pubDate>Thu, 25 Apr 2024 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/llm3/</guid>
+  <description><![CDATA[本文对目前被广泛使用的微调算法，诸如P-Tuning，LoRA和IA3进行了介绍，希望对读者有益。
+本文的目录如下：
+提示学习与语境学习 参数高效微调 pdf文件]]></description>
+</item>
+<item>
+  <title>LLM系列2：几个大模型系列的工作</title>
+  <link>https://valwu.gitee.io/posts/llm2/</link>
+  <pubDate>Mon, 15 Apr 2024 00:00:00 &#43;0000</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/llm2/</guid>
+  <description><![CDATA[本文对目前流行的三个系列的大模型进行介绍，希望对读者有益。
+本文的目录如下：
+GPT系列 LLaMA系列 GLM系列 pdf文件]]></description>
+</item>
+<item>
+  <title>LLM系列1：LLM前的NLP基础</title>
+  <link>https://valwu.gitee.io/posts/llm1/</link>
   <pubDate>Fri, 15 Dec 2023 00:00:00 &#43;0000</pubDate>
   <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/nlp/</guid>
-  <description><![CDATA[本文对LLM前的基于DL的NLP算法做了一个回顾，对transformer和attention等知识做了一个较为nice介绍，希望对读者有益。
+  <guid>https://valwu.gitee.io/posts/llm1/</guid>
+  <description><![CDATA[本文对LLM前的基于DL的NLP算法做了一个回顾。对word2vec和seq2seq， 并对attention、Transformer和BERT等知识做了一个较为深入浅出的介绍，希望对读者有益。
 本文的目录如下：
-NLP 概述 传统算法 基于 DL 的 NLP pdf文件]]></description>
+概述 word2vec seq2seq Attention 与 Transformer BERT系列 pdf文件]]></description>
 </item>
 <item>
   <title>LangChain应用与源码探究</title>
@@ -61,44 +99,6 @@ Spectral Graph Theory基础 信号处理初步 Graph Signal Transformation Graph
   <guid>https://valwu.gitee.io/posts/mainfold/</guid>
   <description><![CDATA[本文对流形学习做了一个快速入门。目录如下：
 isomap与LLE SNE与t-SNE t-SNE加速技术 UMAP pdf文件]]></description>
-</item>
-<item>
-  <title>社团挖掘算法审视</title>
-  <link>https://valwu.gitee.io/posts/community/</link>
-  <pubDate>Thu, 15 Apr 2021 00:00:00 &#43;0000</pubDate>
-  <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/community/</guid>
-  <description><![CDATA[社团挖掘作为流行至今的研究领域，其诞生了诸多极具影响力的算法，本文对此做一个以点提面的介绍
-本文的目录如下：
-概述 Louvain算法与Leiden算法 迭代优化下的社团挖掘 pdf文件]]></description>
-</item>
-<item>
-  <title>应用机器学习入门</title>
-  <link>https://valwu.gitee.io/posts/aml/</link>
-  <pubDate>Wed, 15 Apr 2020 00:00:00 &#43;0000</pubDate>
-  <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/aml/</guid>
-  <description><![CDATA[机器学习在工业界已经被大量使用，本教程面向初学者对工作中常用的机器学习基本知识做一个概览。目录如下：
-总体概述 理论基础 常用算法 平台工具 一个例子 pdf文件]]></description>
-</item>
-<item>
-  <title>强化学习精简教程：从MDP到CFR</title>
-  <link>https://valwu.gitee.io/posts/rl/</link>
-  <pubDate>Sun, 22 Dec 2019 00:00:00 &#43;0000</pubDate>
-  <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/rl/</guid>
-  <description><![CDATA[强化学习作为人工智能中一个经典的研究领域，与深度学习爱结合后涌现出诸多震撼性效果，更是被很多人认为可能是通用人工智能的终极方案。
-basic concepts value lookup algorithms value approximation algorithms policy gradient algorithms Monte Carlo Tree Search imperfect information game adversarial machine learning security Games team-maxmin equilibria pdf文件]]></description>
-</item>
-<item>
-  <title>SQL计算引擎介绍</title>
-  <link>https://valwu.gitee.io/posts/sqlengines/</link>
-  <pubDate>Sat, 12 Jan 2019 00:00:00 &#43;0000</pubDate>
-  <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/sqlengines/</guid>
-  <description><![CDATA[SQL作为数据计算中最广为使用的语言，具有持久强大的生命力，如今绝大多数大数据组件都提供SQL接口，本文对这些组件做一个综述，希望对读者有益。
-本文的目录如下：
-summary of database technologies. relational database and its extensions. SQL-On-Hadoop NoSQL and NewSQL others database. pdf文件]]></description>
 </item>
 </channel>
 </rss>
