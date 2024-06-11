@@ -2,11 +2,15 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   ><url>
-      <loc>https://valwu.gitee.io/</loc><lastmod>2024-05-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-      <loc>https://valwu.gitee.io/posts/</loc><lastmod>2024-05-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-      <loc>https://valwu.gitee.io/categories/</loc><lastmod>2024-05-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-      <loc>https://valwu.gitee.io/posts/llm5/</loc><lastmod>2024-05-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-      <loc>https://valwu.gitee.io/categories/machine-learning/</loc><lastmod>2024-05-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+      <loc>https://valwu.gitee.io/categories/</loc><lastmod>2024-06-05T20:29:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://valwu.gitee.io/tags/draft/</loc><lastmod>2024-06-05T20:29:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://valwu.gitee.io/categories/draft/</loc><lastmod>2024-06-05T20:29:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://valwu.gitee.io/</loc><lastmod>2024-06-05T20:29:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://valwu.gitee.io/posts/44f7fb5/</loc><lastmod>2024-06-05T20:29:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://valwu.gitee.io/posts/</loc><lastmod>2024-06-05T20:29:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://valwu.gitee.io/tags/</loc><lastmod>2024-06-05T20:29:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://valwu.gitee.io/posts/llm5/</loc><lastmod>2024-05-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+      <loc>https://valwu.gitee.io/categories/machine-learning/</loc><lastmod>2024-05-17T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
       <loc>https://valwu.gitee.io/posts/llm4/</loc><lastmod>2024-04-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
       <loc>https://valwu.gitee.io/posts/llm3/</loc><lastmod>2024-04-25T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
       <loc>https://valwu.gitee.io/posts/llm2/</loc><lastmod>2024-04-15T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -35,5 +39,4 @@
       <loc>https://valwu.gitee.io/monograph/master/master/</loc><lastmod>2014-02-12T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
       <loc>https://valwu.gitee.io/posts/bolz/</loc><lastmod>2013-07-12T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
       <loc>https://valwu.gitee.io/posts/plsa/</loc><lastmod>2013-05-12T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-      <loc>https://valwu.gitee.io/collections/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-      <loc>https://valwu.gitee.io/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+      <loc>https://valwu.gitee.io/collections/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

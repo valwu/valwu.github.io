@@ -5,5 +5,5 @@
 ---
 
 > Author: jianjun wu  
-> URL: https://valwu.gitee.io/posts/algomanage/  
+> URL: http://localhost:1313/posts/algomanage/  
 

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Draft - Tag - KnowledgeSqueezer</title>
-    <link>http://localhost:1313/tags/draft/</link>
+    <link>https://valwu.gitee.io/tags/draft/</link>
     <description>Draft - Tag | KnowledgeSqueezer</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 15 Apr 2024 17:15:16 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/draft/" rel="self" type="application/rss+xml" /><item>
-  <title>Graph Learning与GCN的理论溯源</title>
-  <link>http://localhost:1313/posts/gnn/</link>
-  <pubDate>Mon, 15 Apr 2024 17:15:16 &#43;0800</pubDate>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 05 Jun 2024 20:29:12 &#43;0800</lastBuildDate><atom:link href="https://valwu.gitee.io/tags/draft/" rel="self" type="application/rss+xml" /><item>
+  <title>LLM系列6：  RLHF微调</title>
+  <link>https://valwu.gitee.io/posts/44f7fb5/</link>
+  <pubDate>Wed, 05 Jun 2024 20:29:12 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:1313/posts/gnn/</guid>
-  <description><![CDATA[Spectral Graph Theory 要点 信号处理初步:Fourier transform and Waveltes transform Graph Signal Transformation Graph Convolutional Networks graph learning]]></description>
+  <guid>https://valwu.gitee.io/posts/44f7fb5/</guid>
+  <description><![CDATA[本文对RLHF微调做了一个介绍，从强化学习基础，策略梯度算法、PPO，最后到RLHF在语言模型上的应用，希望对读者有益。 pdf文件]]></description>
 </item>
 </channel>
 </rss>

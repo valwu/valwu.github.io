@@ -3,9 +3,17 @@
     <title>KnowledgeSqueezer</title>
     <link>https://valwu.gitee.io/</link>
     <description>KnowledgeSqueezer</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 30 May 2024 00:00:00 &#43;0000</lastBuildDate>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 05 Jun 2024 20:29:12 &#43;0800</lastBuildDate>
       <atom:link href="https://valwu.gitee.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+  <title>LLM系列6：  RLHF微调</title>
+  <link>https://valwu.gitee.io/posts/44f7fb5/</link>
+  <pubDate>Wed, 05 Jun 2024 20:29:12 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>https://valwu.gitee.io/posts/44f7fb5/</guid>
+  <description><![CDATA[本文对RLHF微调做了一个介绍，从强化学习基础，策略梯度算法、PPO，最后到RLHF在语言模型上的应用，希望对读者有益。 pdf文件]]></description>
+</item>
+<item>
   <title>LLM系列5：位置编码与外推技术</title>
   <link>https://valwu.gitee.io/posts/llm5/</link>
   <pubDate>Fri, 17 May 2024 00:00:00 &#43;0000</pubDate>
@@ -92,15 +100,6 @@ Elementary Mathematic Analytics 矩阵代数基础知识 线性规划基础知�
   <description><![CDATA[GCN作为风靡一时的算法，其理论源远流长，本文对此做一个基本介绍，希望对读者有益。
 本文的目录如下：
 Spectral Graph Theory基础 信号处理初步 Graph Signal Transformation Graph Convolutional Networks pdf文件]]></description>
-</item>
-<item>
-  <title>流形学习初步</title>
-  <link>https://valwu.gitee.io/posts/mainfold/</link>
-  <pubDate>Thu, 15 Apr 2021 00:00:00 &#43;0000</pubDate>
-  <author>Author</author>
-  <guid>https://valwu.gitee.io/posts/mainfold/</guid>
-  <description><![CDATA[本文对流形学习做了一个快速入门。目录如下：
-isomap与LLE SNE与t-SNE t-SNE加速技术 UMAP pdf文件]]></description>
 </item>
 </channel>
 </rss>
